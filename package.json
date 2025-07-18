@@ -1,12 +1,12 @@
 {
   "name": "the-wood-culture-backend",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "Server.js",
   "type": "module",
   "scripts": {
-    "dev":"node TWC_Backend/server.js",
+    "dev":"node TWC_Backend/Server.js",
     "build":"npm install && npm install --prefix TWC && npm run build --prefix TWC",
-    "start": "node TWC_Backend/server.js"
+    "start": "node TWC_Backend/Server.js"
   },
   "keywords": [],
   "author": "",
