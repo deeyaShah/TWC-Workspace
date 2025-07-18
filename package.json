@@ -4,9 +4,9 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "dev":"nodemon TWC_Backend/server.js",
+    "dev":"node TWC_Backend/server.js",
     "build":"npm install && npm install --prefix TWC && npm run build --prefix TWC",
-    "start": "nodemon TWC_Backend/server.js"
+    "start": "node TWC_Backend/server.js"
   },
   "keywords": [],
   "author": "",
