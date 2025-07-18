@@ -23,7 +23,7 @@ const ProductManagement = () => {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/products/products"); // Update if your API base URL is different
+      const res = await axios.get("https://twc-workspace.onrender.com/api/products/products"); // Update if your API base URL is different
       setProducts(res.data.products);
     } catch (err) {
       message.error("Failed to load products");

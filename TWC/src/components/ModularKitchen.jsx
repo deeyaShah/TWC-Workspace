@@ -44,7 +44,7 @@ const ModularKitchen = () => {
   useEffect(() => {
     const fetchDesigns = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/Kitchen-Products/api2/v1');
+        const res = await axios.get('https://twc-workspace.onrender.com/Kitchen-Products/api2/v1');
         setDesigns(res.data);
         setSelectedDesign(res.data[0]); // Show first product by default
         toast.success('Kitchen designs loaded successfully!');

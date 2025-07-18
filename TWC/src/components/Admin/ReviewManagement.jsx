@@ -10,7 +10,7 @@ const ReviewManagement = () => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const { data } = await axios.get('http://localhost:5000/api/reviews', {
+        const { data } = await axios.get('https://twc-workspace.onrender.com/api/reviews', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setReviews(data);
@@ -25,7 +25,7 @@ const ReviewManagement = () => {
   const updateStatus = async (id, status) => {
     try {
       const { data } = await axios.patch(
-        `http://localhost:5000/api/reviews/${id}`,
+        `https://twc-workspace.onrender.com/api/reviews/${id}`,
         { status },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -43,7 +43,7 @@ const ReviewManagement = () => {
   // Delete a review
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/reviews/${id}`, {
+      await axios.delete(`https://twc-workspace.onrender.com/api/reviews/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setReviews((prev) => prev.filter((r) => r._id !== id));

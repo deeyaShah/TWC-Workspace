@@ -18,7 +18,7 @@ import {
 } from "@ant-design/icons";
 import axios from "axios";
 
-const API_BASE = "http://localhost:5000/Kitchen-Products/api2/v1"; // Update if hosted
+const API_BASE = "https://twc-workspace.onrender.com/Kitchen-Products/api2/v1"; // Update if hosted
 
 const KitchenManagement = () => {
   const [form] = Form.useForm();

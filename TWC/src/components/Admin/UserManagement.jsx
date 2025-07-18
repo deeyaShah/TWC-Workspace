@@ -23,7 +23,7 @@ const UserManagement = () => {
   const fetchUsers = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/users?showDeleted=${showDeleted}`
+        `https://twc-workspace.onrender.com/api/users?showDeleted=${showDeleted}`
       );
       const receivedUsers = Array.isArray(res.data) ? res.data : res.data.users;
       setUsers(receivedUsers);
@@ -43,7 +43,7 @@ const UserManagement = () => {
 
   const handleRoleChange = async (userId, newRole) => {
     try {
-      await axios.put(`http://localhost:5000/api/users/${userId}`, {
+      await axios.put(`https://twc-workspace.onrender.com/api/users/${userId}`, {
         role: newRole,
       });
       message.success("Role updated successfully!");
@@ -66,7 +66,7 @@ const UserManagement = () => {
   const handlePermanentDelete = async (userId) => {
     try {
       await axios.delete(
-        `http://localhost:5000/api/users/permanent-delete/${userId}`
+        `https://twc-workspace.onrender.com/api/users/permanent-delete/${userId}`
       );
       message.success("User permanently deleted!");
       fetchUsers();

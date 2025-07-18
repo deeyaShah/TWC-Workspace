@@ -44,7 +44,7 @@ const SlotBookingForm = () => {
     }
 
     try {
-      const res = await fetch('http://localhost:5000/api/slot/book', {
+      const res = await fetch('https://twc-workspace.onrender.com/api/slot/book', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

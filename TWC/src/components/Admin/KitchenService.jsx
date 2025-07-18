@@ -14,7 +14,7 @@ const KitchenServiceAdmin = () => {
   // Fetch all bookings
   const fetchBookings = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/slot/admin/all');
+      const res = await fetch('https://twc-workspace.onrender.com/api/slot/admin/all');
       const data = await res.json();
       setBookings(data);
       setLoading(false);
@@ -31,7 +31,7 @@ const KitchenServiceAdmin = () => {
   // Accept booking
   const handleAccept = async (id) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/slot/admin/accept/${id}`, {
+      const res = await fetch(`https://twc-workspace.onrender.com/api/slot/admin/accept/${id}`, {
         method: 'PUT',
       });
       const data = await res.json();
@@ -52,7 +52,7 @@ const KitchenServiceAdmin = () => {
   // Suggest alternative time
   const handleSuggest = async () => {
     try {
-      const res = await fetch(`http://localhost:5000/api/slot/admin/suggest/${selectedId}`, {
+      const res = await fetch(`https://twc-workspace.onrender.com/api/slot/admin/suggest/${selectedId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ suggestedTime }),
@@ -79,7 +79,7 @@ const KitchenServiceAdmin = () => {
 
   const handleDelete = async (id) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/slot/admin/delete/${id}`, {
+      const res = await fetch(`https://twc-workspace.onrender.com/api/slot/admin/delete/${id}`, {
         method: 'DELETE',
       });
       const data = await res.json();

@@ -30,7 +30,7 @@ const Checkout = () => {
   const fetchAddress = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.get(`http://localhost:5000/api/address/my-addresses`, {
+      const res = await axios.get(`https://twc-workspace.onrender.com/api/address/my-addresses`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -66,12 +66,12 @@ const Checkout = () => {
 
     try {
       if (addressId) {
-        await axios.put(`http://localhost:5000/api/address/update/${addressId}`, newAddress, {
+        await axios.put(`https://twc-workspace.onrender.com/api/address/update/${addressId}`, newAddress, {
           headers: { Authorization: `Bearer ${token}` },
         });
         toast.success("Address updated successfully!");
       } else {
-        await axios.post(`http://localhost:5000/api/address/add`, newAddress, {
+        await axios.post(`https://twc-workspace.onrender.com/api/address/add`, newAddress, {
           headers: { Authorization: `Bearer ${token}` },
         });
         toast.success("Address saved successfully!");

@@ -44,7 +44,7 @@ const PaymentPage = () => {
 
       if (paymentMethod === 'cash') {
         // Handle COD
-        const res = await axios.post('http://localhost:5000/api/orders', orderData, {
+        const res = await axios.post('https://twc-workspace.onrender.com/api/orders', orderData, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
@@ -62,7 +62,7 @@ const PaymentPage = () => {
         }
 
         // Call backend to create Razorpay order
-        const res = await axios.post('http://localhost:5000/api/orders', orderData, {
+        const res = await axios.post('https://twc-workspace.onrender.com/api/orders', orderData, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
@@ -82,7 +82,7 @@ const PaymentPage = () => {
             // Verify payment with backend
             try {
               const verifyRes = await axios.post(
-                'http://localhost:5000/api/orders/verify',
+                'https://twc-workspace.onrender.com/api/orders/verify',
                 {
                   razorpay_order_id: response.razorpay_order_id,
                   razorpay_payment_id: response.razorpay_payment_id,

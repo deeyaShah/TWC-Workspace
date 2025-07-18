@@ -16,7 +16,7 @@ const VerifyOtp = () => {
         const email = localStorage.getItem("resetEmail");
     
         try {
-        const res = await axios.post(`http://localhost:5000/api/auth/otp-verify`, { email, otp });
+        const res = await axios.post(`https://twc-workspace.onrender.com/api/auth/otp-verify`, { email, otp });
         toast.success(res.data.message); // ✅ Success toast
         localStorage.setItem("resetToken", res.data.token);
         setTimeout(() => navigate("/reset-password"), 1000);

@@ -24,7 +24,7 @@ const ForgotPassword = () => {
         setMessage("");
     
         try {
-        const res = await axios.post(`http://localhost:5000/api/auth/forgot-password`, { email });
+        const res = await axios.post(`https://twc-workspace.onrender.com/api/auth/forgot-password`, { email });
         toast.success(res.data.message || "OTP sent to your email.");
         localStorage.setItem("resetEmail", email);
         setTimeout(() => navigate("/otp-verify"), 1000);

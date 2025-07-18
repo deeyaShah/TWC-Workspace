@@ -13,7 +13,7 @@ const OrderManagement = () => {
     useEffect(() => {
         const fetchOrders = async () => {
             try {
-                const { data } = await axios.get('http://localhost:5000/api/orders/admin/all-orders', {
+                const { data } = await axios.get('https://twc-workspace.onrender.com/api/orders/admin/all-orders', {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem("token")}`
                     }
@@ -30,7 +30,7 @@ const OrderManagement = () => {
     const handleStatusChange = async (orderId, status) => {
         try {
             const { data } = await axios.patch(
-                `http://localhost:5000/api/orders/admin/update-status/${orderId}`,
+                `https://twc-workspace.onrender.com/api/orders/admin/update-status/${orderId}`,
                 { status },
                 {
                     headers: {
@@ -66,7 +66,7 @@ const OrderManagement = () => {
         try {
             const values = await form.validateFields();
             await axios.put(
-                `http://localhost:5000/api/orders/tracking/${selectedOrderId}`,
+                `https://twc-workspace.onrender.com/api/orders/tracking/${selectedOrderId}`,
                 values,
                 {
                     headers: {

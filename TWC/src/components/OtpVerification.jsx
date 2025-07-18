@@ -55,7 +55,7 @@ const OtpVerification = () => {
 
         const enteredOtp = otp.join(""); // Combine digits into a full OTP
         try {
-            const response = await axios.post("http://localhost:5000/api/auth/verify-otp", { email, otp: enteredOtp });
+            const response = await axios.post("https://twc-workspace.onrender.com/api/auth/verify-otp", { email, otp: enteredOtp });
 
             if (response.data.success) {
                 toast.success("OTP Verified Successfully!");

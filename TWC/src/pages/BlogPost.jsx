@@ -11,7 +11,7 @@ const BlogPost = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/blogs/${id}`); // Replace with your backend API endpoint
+        const response = await axios.get(`https://twc-workspace.onrender.com/api/blogs/${id}`); // Replace with your backend API endpoint
         setPost(response.data); // Set fetched post data
         setLoading(false); // Set loading to false when data is fetched
       } catch (error) {

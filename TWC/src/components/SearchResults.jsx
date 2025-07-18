@@ -15,7 +15,7 @@ const SearchResults = () => {
     const fetchSearchResults = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/products/search?name=${searchQuery}`
+          `https://twc-workspace.onrender.com/api/products/search?name=${searchQuery}`
         );
         setProducts(response.data);
 

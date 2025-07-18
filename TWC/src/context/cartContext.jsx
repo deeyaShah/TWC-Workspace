@@ -11,7 +11,7 @@ export const CartProvider = ({ children }) => {
 
   const fetchCart = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/cart', {
+      const res = await axios.get('https://twc-workspace.onrender.com/api/cart', {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       setCartItems(res.data.items || []);
@@ -23,7 +23,7 @@ export const CartProvider = ({ children }) => {
   const addToCart = async (productId, quantity) => {
     try {
       await axios.post(
-        'http://localhost:5000/api/cart/add',
+        'https://twc-workspace.onrender.com/api/cart/add',
         { productId, quantity },
         {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
@@ -38,7 +38,7 @@ export const CartProvider = ({ children }) => {
   const removeFromCart = async (productId, quantity) => {
     try {
       await axios.post(
-        'http://localhost:5000/api/cart/remove',
+        'https://twc-workspace.onrender.com/api/cart/remove',
         { productId, quantity },
         {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
@@ -51,7 +51,7 @@ export const CartProvider = ({ children }) => {
   };
   const clearCart = async () => {
     try {
-      await axios.delete('http://localhost:5000/api/cart/clear', {
+      await axios.delete('https://twc-workspace.onrender.com/api/cart/clear', {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       setCartItems([]); // clear cart in context

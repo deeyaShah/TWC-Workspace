@@ -20,7 +20,7 @@ const OrderHistory = () => {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
         };
-        const response = await axios.get('http://localhost:5000/api/orders/my-orders', config);
+        const response = await axios.get('https://twc-workspace.onrender.com/api/orders/my-orders', config);
         setOrders(response.data);
       } catch (err) {
         console.error(err);

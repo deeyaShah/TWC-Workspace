@@ -6,7 +6,7 @@ const ProductList=()=>{
     const [products, setProduct]=useState([]);
 
     const getProducts=async()=>{
-        const res=await axios.get('http://localhost:5000/Products/api1/v2');
+        const res=await axios.get('https://twc-workspace.onrender.com/Products/api1/v2');
         setProduct(res.data);
     }
     useEffect(()=>{

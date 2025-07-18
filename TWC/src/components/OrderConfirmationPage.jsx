@@ -38,7 +38,7 @@ const OrderConfirmationPage = () => {
     const token = localStorage.getItem('token');
     try {
       await axios.post(
-        'http://localhost:5000/api/reviews',
+        'https://twc-workspace.onrender.com/api/reviews',
         {
           order:   order._id,
           product: item.product,

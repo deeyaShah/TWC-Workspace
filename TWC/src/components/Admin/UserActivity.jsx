@@ -14,7 +14,7 @@ const UserActivity = () => {
   const fetchLogs = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("http://localhost:5000/api/user-activity");
+      const res = await axios.get("https://twc-workspace.onrender.com/api/user-activity");
       setLogs(res.data);
       setFilteredLogs(res.data);
     } catch (err) {
@@ -31,7 +31,7 @@ const UserActivity = () => {
   const handleDelete = async (id) => {
     if (!window.confirm("Delete this log?")) return;
     try {
-      await axios.delete(`http://localhost:5000/api/user-activity/${id}`);
+      await axios.delete(`https://twc-workspace.onrender.com/api/user-activity/${id}`);
       fetchLogs();
     } catch (err) {
       console.error("Delete error:", err);
@@ -48,7 +48,7 @@ const UserActivity = () => {
 
   const handleSave = async () => {
     try {
-      await axios.put(`http://localhost:5000/api/user-activity/${editingLog._id}`, {
+      await axios.put(`https://twc-workspace.onrender.com/api/user-activity/${editingLog._id}`, {
         ipAddress: editingLog.ipAddress,
         userAgent: editingLog.userAgent,
       });

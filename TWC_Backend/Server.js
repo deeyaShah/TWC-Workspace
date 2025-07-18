@@ -32,7 +32,7 @@ const _dirname=path.resolve();
 
 // Middleware to parse JSON
 app.use(cors({
-    origin: "http://localhost:5173", // 👈 your frontend URL
+    origin: "https://twc-workspace.onrender.com", // 👈 your frontend URL
     credentials: true,              // 👈 allow credentials (cookies, auth headers)
   }));
 app.use(express.json({ limit: "20mb" })); // Increase JSON limit

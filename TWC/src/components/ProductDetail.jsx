@@ -24,7 +24,7 @@ const ProductDetail = () => {
     const fetchProductDetails = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`http://localhost:5000/api/products/product/${productId}`);
+        const response = await fetch(`https://twc-workspace.onrender.com/api/products/product/${productId}`);
         const data = await response.json();
         setProduct(data);
         setLoading(false);
@@ -38,7 +38,7 @@ const ProductDetail = () => {
         const token = localStorage.getItem("token");
     
         const response = await axios.get(
-          `http://localhost:5000/api/reviews/${productId}`,
+          `https://twc-workspace.onrender.com/api/reviews/${productId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -78,7 +78,7 @@ const ProductDetail = () => {
   
     try {
       const response = await axios.post(
-        'http://localhost:5000/api/cart/add',
+        'https://twc-workspace.onrender.com/api/cart/add',
         { productId: product._id, quantity: parseInt(quantity) },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -105,7 +105,7 @@ const ProductDetail = () => {
     }
   
     try {
-      await axios.post("http://localhost:5000/api/wishlist/add", {
+      await axios.post("https://twc-workspace.onrender.com/api/wishlist/add", {
         productId: product._id, // assuming you have `product` object here
       }, {
         headers: {

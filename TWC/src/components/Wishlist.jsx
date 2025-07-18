@@ -18,7 +18,7 @@ const Wishlist = () => {
     const fetchWishlist = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get('http://localhost:5000/api/wishlist', {
+        const response = await axios.get('https://twc-workspace.onrender.com/api/wishlist', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setWishlist(response.data);
@@ -38,7 +38,7 @@ const Wishlist = () => {
   const handleRemovePermanently = async (productId) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:5000/api/wishlist/${productId}`, {
+      await axios.delete(`https://twc-workspace.onrender.com/api/wishlist/${productId}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setWishlist(prev => prev.filter(item => item._id !== productId));
@@ -60,7 +60,7 @@ const Wishlist = () => {
     }
 
     try {
-      await axios.post("http://localhost:5000/api/cart/add", {
+      await axios.post("https://twc-workspace.onrender.com/api/cart/add", {
         productId,
         quantity: 1
       }, {

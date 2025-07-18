@@ -18,7 +18,7 @@ const ModularFurniture = () => {
     const fetchProducts = async () => {
       try {
         setLoading(true);
-        const response = await fetch('http://localhost:5000/api/products/products');
+        const response = await fetch('https://twc-workspace.onrender.com/api/products/products');
         const data = await response.json();
         setProducts(data.products || data || []);
         setLoading(false);
@@ -41,7 +41,7 @@ const ModularFurniture = () => {
     if (newCategories.length > 0) {
       try {
         setLoading(true);
-        const response = await fetch(`http://localhost:5000/api/products/subcategory-details/${value}`);
+        const response = await fetch(`https://twc-workspace.onrender.com/api/products/subcategory-details/${value}`);
         const data = await response.json();
         setProducts(data);
         setLoading(false);
@@ -52,7 +52,7 @@ const ModularFurniture = () => {
     } else {
       try {
         setLoading(true);
-        const response = await fetch('http://localhost:5000/api/products/products');
+        const response = await fetch('https://twc-workspace.onrender.com/api/products/products');
         const data = await response.json();
         setProducts(data.products || []);
         setLoading(false);
@@ -124,7 +124,7 @@ const ModularFurniture = () => {
     }
   
     try {
-      const res = await fetch(`http://localhost:5000/api/cart/add`, {
+      const res = await fetch(`https://twc-workspace.onrender.com/api/cart/add`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

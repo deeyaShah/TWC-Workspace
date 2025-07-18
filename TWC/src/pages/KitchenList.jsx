@@ -6,7 +6,7 @@ const KitchenList=()=>{
     const [kitchens, setKitchenProduct]=useState([]);
 
     const getKitchenProduct=async()=>{
-        const res=await axios.get('http://localhost:5000/Kitchen-Products/api2/v1');
+        const res=await axios.get('https://twc-workspace.onrender.com/Kitchen-Products/api2/v1');
         setKitchenProduct(res.data);
     }
     useEffect(()=>{

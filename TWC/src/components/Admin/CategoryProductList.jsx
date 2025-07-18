@@ -20,7 +20,7 @@ const CategoryProductList = () => {
   useEffect(() => {
     const fetchSubcategory = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/products/subcategory-details/${subcategoryId}`);
+        const response = await axios.get(`https://twc-workspace.onrender.com/api/products/subcategory-details/${subcategoryId}`);
         console.log("🔥 Subcategory ID being fetched:", subcategoryId);
         console.log("Subcategory response:", response.data);
         setSubcategoryName(response.data.name);
@@ -39,7 +39,7 @@ const CategoryProductList = () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/products/subcategory/${subcategoryId}`
+          `https://twc-workspace.onrender.com/api/products/subcategory/${subcategoryId}`
         );
         console.log("🔥 Products response:", response.data); // Add this
         setProducts(response.data);
@@ -69,7 +69,7 @@ const CategoryProductList = () => {
       content: "Are you sure you want to delete this product?",
       onOk: async () => {
         try {
-          await axios.delete(`http://localhost:5000/api/products/${id}`);
+          await axios.delete(`https://twc-workspace.onrender.com/api/products/${id}`);
           setProducts(products.filter((item) => item._id !== id));
           message.success("Product deleted");
         } catch (err) {
@@ -96,7 +96,7 @@ const CategoryProductList = () => {
   
       if (selectedProduct) {
         const response = await axios.put(
-          `http://localhost:5000/api/products/${selectedProduct._id}`,
+          `https://twc-workspace.onrender.com/api/products/${selectedProduct._id}`,
           payload
         );
         setProducts((prev) =>
@@ -105,7 +105,7 @@ const CategoryProductList = () => {
         message.success("Product updated");
       } else {
         const response = await axios.post(
-          "http://localhost:5000/api/products",
+          "https://twc-workspace.onrender.com/api/products",
           payload
         );
   

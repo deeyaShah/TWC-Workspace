@@ -29,7 +29,7 @@ const AdminHomePage = () => {
 
   const fetchProductCount = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/products/count");
+      const res = await axios.get("https://twc-workspace.onrender.com/api/products/count");
       setProductCount(res.data.count);
     } catch (error) {
       console.error("Error fetching product count", error);
@@ -38,7 +38,7 @@ const AdminHomePage = () => {
 
   const fetchKitchenCount = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/Kitchen-Products/api2/v1/count");
+      const res = await axios.get("https://twc-workspace.onrender.com/Kitchen-Products/api2/v1/count");
       setKitchenProductCount(res.data.count);
     } catch (error) {
       console.error("Error fetching kitchen product count", error);
@@ -47,7 +47,7 @@ const AdminHomePage = () => {
 
   const fetchOrderCount = async () => {
     try {
-      const { data } = await axios.get("http://localhost:5000/api/orders/count", {
+      const { data } = await axios.get("https://twc-workspace.onrender.com/api/orders/count", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -60,7 +60,7 @@ const AdminHomePage = () => {
 
   const fetchOrderStatusData = async () => {
     try {
-      const { data } = await axios.get("http://localhost:5000/api/orders/count-by-status", {
+      const { data } = await axios.get("https://twc-workspace.onrender.com/api/orders/count-by-status", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -79,7 +79,7 @@ const AdminHomePage = () => {
 
   const fetchRecentOrders = async () => {
     try {
-      const { data } = await axios.get("http://localhost:5000/api/orders/admin/all-orders", {
+      const { data } = await axios.get("https://twc-workspace.onrender.com/api/orders/admin/all-orders", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

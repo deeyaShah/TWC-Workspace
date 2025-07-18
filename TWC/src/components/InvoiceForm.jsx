@@ -13,7 +13,7 @@ const InvoiceForm = () => {
     useEffect(() => {
         const fetchOrder = async () => {
             try {
-                const { data } = await axios.get(`http://localhost:5000/api/orders/order/${orderId}`, {
+                const { data } = await axios.get(`https://twc-workspace.onrender.com/api/orders/order/${orderId}`, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem('token')}`, // Send token if protected route
                     },

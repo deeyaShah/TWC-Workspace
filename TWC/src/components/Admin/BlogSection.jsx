@@ -12,7 +12,7 @@ const BlogManagement = () => {
 
   //for connecting backend
   useEffect(() => {
-    fetch("http://localhost:5000/api/blogs")
+    fetch("https://twc-workspace.onrender.com/api/blogs")
       .then((res) => res.json())
       .then((data) => setBlogs(data))
       .catch((error) => console.error("Error fetching blogs:", error));
@@ -25,7 +25,7 @@ const BlogManagement = () => {
     if (editMode) {
       // Update existing blog (PUT request)
       try {
-        const response = await fetch(`http://localhost:5000/api/blogs/${currentBlog._id}`, {
+        const response = await fetch(`https://twc-workspace.onrender.com/api/blogs/${currentBlog._id}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formattedValues),
@@ -45,7 +45,7 @@ const BlogManagement = () => {
     } else {
       // Add new blog (POST request)
       try {
-        const response = await fetch("http://localhost:5000/api/blogs", {
+        const response = await fetch("https://twc-workspace.onrender.com/api/blogs", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formattedValues),
@@ -100,7 +100,7 @@ const BlogManagement = () => {
       title: "Are you sure you want to delete this blog?",
       onOk: async () => {
         try {
-          const response = await fetch(`http://localhost:5000/api/blogs/${id}`, { method: "DELETE" });
+          const response = await fetch(`https://twc-workspace.onrender.com/api/blogs/${id}`, { method: "DELETE" });
   
           if (!response.ok) throw new Error("Failed to delete blog");
   

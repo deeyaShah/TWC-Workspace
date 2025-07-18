@@ -30,7 +30,7 @@ const CategoryFurniture = () => {
   // 🔃 Get Main Category ID
   const fetchMainCategoryId = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/main-categories");
+      const res = await axios.get("https://twc-workspace.onrender.com/api/main-categories");
       const furnitureCategory = res.data.find(
         (cat) => cat.name.toLowerCase() === "modular furniture"
       );
@@ -51,7 +51,7 @@ const CategoryFurniture = () => {
   // 🔃 Fetch subcategories
   const fetchSubCategories = async (categoryId) => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/subcategories/${categoryId}`);
+      const res = await axios.get(`https://twc-workspace.onrender.com/api/subcategories/${categoryId}`);
       setFurnitureCategories(res.data);
     } catch (err) {
       console.error(err);
@@ -75,7 +75,7 @@ const CategoryFurniture = () => {
       if (editMode) {
         // 🔄 Update Existing Category
         try {
-          await axios.put(`http://localhost:5000/api/subcategories/${editCategoryId}`, {
+          await axios.put(`https://twc-workspace.onrender.com/api/subcategories/${editCategoryId}`, {
             name: categoryName,
             mainCategory: mainCategoryId,
           });
@@ -89,7 +89,7 @@ const CategoryFurniture = () => {
       } else {
         // ➕ Add New Category
         try {
-          await axios.post("http://localhost:5000/api/subcategories", {
+          await axios.post("https://twc-workspace.onrender.com/api/subcategories", {
             name: categoryName,
             mainCategory: mainCategoryId,
           });
@@ -126,7 +126,7 @@ const CategoryFurniture = () => {
   };
   const handleDelete = async (id) => {
   try {
-    await axios.delete(`http://localhost:5000/api/subcategories/${id}`);
+    await axios.delete(`https://twc-workspace.onrender.com/api/subcategories/${id}`);
     message.success("Category deleted.");
     await fetchSubCategories(mainCategoryId); // ✅ Re-fetch
   } catch (err) {
