@@ -1,0 +1,136 @@
+
+body {
+  background-color: #f4f4f4;
+}
+
+/* Container for the whole form */
+.container {
+  padding: 30px 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+/* Headings */
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Form elements spacing */
+form > div {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #555;
+  font-size: 15px;
+}
+
+/* Inputs, Selects */
+input,
+select {
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: border 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Error Message */
+span {
+  color: red;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+/* Button */
+button {
+  padding: 12px 0;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 15px;
+  }
+
+  form {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  input,
+  select {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 20px;
+  }
+
+  form {
+    padding: 16px;
+  }
+
+  input,
+  select {
+    font-size: 13px;
+    padding: 9px 10px;
+  }
+
+  button {
+    padding: 10px 0;
+    font-size: 14px;
+  }
+}

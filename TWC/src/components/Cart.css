@@ -1,0 +1,629 @@
+/* Cart.css */
+
+body {
+    background-color: white; /* Light background color for the whole page */
+    margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif; /* Set a default font */
+}
+
+.cart-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #FFF6EB; /* Light background for the cart container */
+    border-radius: 8px; /* Rounded corners for the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-top: 30px;
+}
+
+/* Centering the Shopping Bag Title */
+.shopping-bag-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #6B705C; /* Darker text color */
+    margin-bottom: 20px;
+}
+
+/* Enlarging Product Images */
+.cart-item-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.cart-item-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Adjust Cart Item Layout */
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid #B7B7A4; /* Light border color */
+    position: relative;
+}
+
+/* Spacing Between Dropdowns */
+.quantity-size-container {
+    display: flex;
+    gap: 15px; /* Adds spacing between the quantity and size dropdowns */
+    margin-top: 10px;
+    border: 10px black;
+}
+
+/* Added border to quantity and size dropdowns */
+.quantity-size-container select {
+    border: 2px solid #6B705C; /* Border color matching the theme */
+    border-radius: 4px; /* Rounded corners */
+    padding: 5px; /* Padding inside dropdown */
+    font-size: 16px; /* Readable font size */
+    background-color: white; /* Ensure it stays visible */
+    color: #333; /* Dark text for readability */
+    cursor: pointer; /* Show pointer on hover */
+    margin-left: 8px;
+}
+
+
+/* Cart Item Details */
+.cart-item-details {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.cart-item-details h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #6B705C; /* Darker text color */
+}
+
+.cart-item-details p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.wishlist-cart-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  /* Wishlist Button Styling */
+  .wishlist-button {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: #F1E3D3;
+    border: 1px solid #C58C6D;
+    border-radius: 8px; /* rectangle with rounded edges */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    max-width: fit-content; /* ⬅️ container will shrink to fit content */
+  }
+  
+  .wishlist-button:hover {
+    background-color: #edd3c3;
+  }
+  
+  /* Heart Icon */
+  .wishlist-icon {
+    font-size: 16px;
+    color: red;
+    margin-right: 6px;
+  }
+  
+  /* Wishlist Text */
+  .wishlist-text {
+    font-size: 14px;
+    color: #6B705C;
+    font-weight: 500;
+  }
+  
+  /* Cart Count */
+  .cart-count {
+    font-size: 18px;
+    font-weight: 600;
+    color: #6B705C;
+  }   
+
+/* Close Button */
+.close-button, .close-wishlist {
+    position: absolute; /* Position the close button absolutely */
+    top: 10px; /* Distance from the top */
+    right: 10px; /* Distance from the right */
+    background: none; /* No background */
+    border: none; /* No border */
+    font-size: 24px; /* Font size for the close button */
+    cursor: pointer; /* Pointer cursor on hover */
+    color: #6B705C; /* Darker color for the close button */
+}
+
+.remove-button {
+    position: static; /* remove absolute positioning */
+    margin-top: 12px;
+    width: 100%; /* make it full width of container */
+    padding: 10px 0;
+    background-color: #C58C6D;
+    color: white;
+    border: none;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .remove-button:hover {
+    background-color: #DDBEA9;
+    color: black;
+  }
+  
+
+/* Order Details Section */
+.order-details {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #FFF6EB; /* Light background color */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.order-details p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* Proceed Button Positioned at Bottom Right */
+/* Total Container */
+.total-container {
+    position: relative; /* Set position to relative for absolute positioning of child elements */
+    padding: 20px; /* Add padding for spacing */
+    background-color: #FFF6EB; /* Background color for the total container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Total Amount Styling */
+.total-amount {
+    font-size: 20px; /* Font size for the total amount */
+    font-weight: bold; /* Bold text */
+    color: #6B705C; /* Darker text color */
+    margin-bottom: 40px; /* Space below the total amount */
+}
+
+/* Proceed Button Positioned at Bottom Right */
+.proceed-button {
+    position: static; /* Change to fixed to ensure it stays in the desired area */
+    bottom: 50px; /* Adjust distance from the bottom as per your circled area */
+    right: 50px; /* Adjust distance from the right as per your circled area */
+    background-color: #6B705C; /* Primary color */
+    color: white;
+    border: none;
+    padding: 12px 20px; /* Padding for the button */
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+.proceed-button:hover {
+    background-color: #B7B7A4; /* Lighter shade on hover */
+}
+
+/* Confirmation Modal Styling */
+.confirmation-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFF6EB; /* Light background color */
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1000;
+    width: 400px;
+    max-width: 90%;
+}
+
+.confirmation-modal p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 500;
+}
+
+.confirmation-modal button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 10px 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001; /* Ensure it appears above other content */
+}
+
+/* Modal Content - Centered */
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Ensures perfect centering */
+    max-width: 600px; /* Set a max width for the modal */
+    width: 90%; /* Responsive width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+/* Close Button for Modal */
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333; /* Color of the close button */
+}
+
+/* Image Container in Modal - Centered */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px; /* Space below the close button */
+}
+
+/* Modal Image */
+.modal-image {
+    max-width: 100%; /* Responsive image */
+    max-height: 80vh; /* Ensure it doesn't overflow the screen */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+/* Dots for Slider */
+.slick-dots {
+    bottom: -30px; /* Position dots below the slider */
+}
+
+.slick-dots li button:before {
+    font-size: 12px; /* Size of the dots */
+    color: #fff; /* Dot color */
+}
+
+.slick-dots li.slick-active button:before {
+    color: #daa683; /* Active dot color */
+}
+
+/* Font Face */
+@font-face {
+    font-family: 'slick';
+    src: url('/fonts/slick.eot');
+    src: url('/fonts/slick.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/slick.woff') format('woff'),
+         url('/fonts/slick.ttf') format('truetype'),
+         url('/fonts/slick.svg#slick') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.confirmation-modal {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 500px; /* Adjust width as needed */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.confirmation-modal p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Ensures buttons are evenly spaced */
+    gap: 10px; /* Adds space between buttons */
+}
+
+.button-container button {
+    flex: 1; /* Ensures buttons take equal width */
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+confirmation-modal button:first-child {
+    background-color: #C58C6D; /* Color for first button */
+    color: #333;
+}
+
+.confirmation-modal button:first-child:hover {
+    background-color: #bc9c87; /* Hover color for first button */
+}
+
+.confirmation-modal button:nth-child(2) {
+    background-color:#a5ad8d; /* Color for second button */
+    color: white;
+}
+
+.confirmation-modal button:nth-child(2):hover {
+    background-color:#6B705C; /* Hover color for second button */
+}
+.confirmation-modal button:nth-child(3) {
+    background-color:#dfb498; /* Color for second button */
+    color: white;
+}
+
+.confirmation-modal button:nth-child(3):hover {
+    background-color:#df8b53; /* Hover color for second button */
+}
+
+.confirmation-modal button:nth-child(4) {
+    background-color:#C58C6D; /* Color for second button */
+    color: white;
+}
+
+.confirmation-modal button:nth-child(4):hover {
+    background-color:#c07248; /* Hover color for second button */
+}
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    display: flex;
+    /* justify-content: center; /* Center horizontally 
+    align-items: center; Center vertically */
+    z-index: 1001; /* Ensure it appears above other content */
+
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    max-width: 600px; /* Set a max width for the modal */
+    width: 100%; /* Full width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    margin-left: -850px;
+    margin-top: -200px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333; /* Color of the close button */
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Space below the close button */   
+}
+
+.modal-image {
+    max-width: 100%; /* Responsive image */
+    max-height: 400px; /* Limit height */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+.wishlist
+{
+    color: blue;
+ 
+}
+@media (max-width: 768px) {
+    .cart-container {
+        padding: 16px;
+        margin: 0 12px;
+        border-radius: 10px;
+      }
+  
+    .cart-item {
+      flex-direction: column; /* Stack image and details vertically */
+      align-items: flex-start;
+    }
+  
+    .cart-item-image img {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+    }
+  
+    .cart-item-details {
+      margin-left: 0;
+      width: 100%;
+    }
+  
+    .remove-button {
+      position: static;
+      width: 100%;
+      margin-top: 12px;
+      font-size: 14px;
+      padding: 10px;
+      text-align: center;
+    }
+  
+    .wishlist-cart-header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .wishlist-button {
+      padding: 6px 10px;
+    }
+  
+    .cart-count {
+      font-size: 16px;
+    }
+  
+    .proceed-button {
+      width: 100%;
+      font-size: 15px;
+      padding: 12px;
+      margin-top: 20px;
+    }
+  }
+  
+/* ----------------- 📱 MOBILE RESPONSIVENESS ----------------- */
+@media (max-width: 480px) {
+
+    .cart-container {
+      padding: 16px;
+      margin: 0 12px;
+      border-radius: 10px;
+    }
+  
+    .shopping-bag-title {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+  
+    .wishlist-cart-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+      }      
+  
+    .wishlist-button {
+      padding: 6px 10px;
+      font-size: 14px;
+    }
+  
+    .wishlist-icon {
+      font-size: 14px;
+    }
+  
+    .wishlist-text {
+      font-size: 13px;
+    }
+  
+    .cart-count {
+      font-size: 14px;
+      white-space: nowrap;
+    }
+  
+    .cart-item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      padding-bottom: 20px;
+    }
+  
+    .cart-item-image img {
+      width: 100%;
+      height: auto;
+      max-height: 200px;
+    }
+  
+    .cart-item-details {
+      margin-left: 0;
+      width: 100%;
+    }
+  
+    .cart-item-details h3 {
+      font-size: 16px;
+    }
+  
+    .cart-item-details p {
+      font-size: 14px;
+    }
+  
+    .remove-button {
+        margin-top: 10px;
+        font-size: 13px;
+        padding: 8px 0;
+      }    
+  
+    .order-details {
+      padding: 16px;
+    }
+  
+    .order-details p {
+      font-size: 14px;
+    }
+  
+    .proceed-button {
+      width: 100%;
+      padding: 10px;
+      font-size: 15px;
+      margin-top: 20px;
+    }
+  
+    .confirmation-modal {
+      width: 90%;
+      padding: 16px;
+    }
+  
+    .confirmation-modal p {
+      font-size: 15px;
+    }
+  
+    .button-container {
+      flex-direction: column;
+      gap: 8px;
+    }
+  
+    .button-container button {
+      width: 100%;
+    }
+  
+    .modal-content {
+      width: 95%;
+      margin-left: 0;
+      margin-top: 0;
+      transform: translate(-50%, -50%);
+    }
+  
+    .modal-image {
+      max-height: 250px;
+    }
+  
+  }
+  

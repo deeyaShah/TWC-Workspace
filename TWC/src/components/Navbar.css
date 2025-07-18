@@ -1,0 +1,208 @@
+/* Existing Navbar Styles - Adjusted for better responsiveness */
+
+nav {
+  background-color: rgba(7, 7, 7,0.9); /* Dark background with transparency */
+  padding: 0.8rem 1.5rem; /* Adjusted padding for better resizing */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 80px; /* Adjusted height */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.logo {
+  margin-top: 25px;
+}
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.space-x-4 > * {
+  margin-right: 1rem;
+}
+
+.text-white {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.text-white:hover {
+  color: #f0f0f0;
+}
+
+.absolute {
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  transition: transform 0.3s ease;
+}
+
+.relative:hover .absolute {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.top-bar-icons {
+  display: flex;
+  align-items: center;
+}
+
+.search-container {
+  position: relative;
+  margin-right: 20px;
+}
+
+.search-icon {
+  cursor: pointer;
+  color: white; /* Default color */
+  width: 24px; /* Fixed width */
+  height: 24px; /* Fixed height */
+  display: flex; /* Center the icon */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  transition: transform 0.2s; /* Smooth transition for scaling */
+  transform-origin: center; /* Ensure scaling happens from the center */
+}
+
+.search-icon:hover {
+  transform: scale(1.1) translateY(0) translateX(0); /* Slightly increase size on hover without vertical movement */
+}
+
+.search-input {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #2d3748; /* Dark gray */
+  color: white;
+  padding: 10px;
+  border: 1px solid #4a5568; /* Border color */
+  border-radius: 20px;
+  width: 100%;
+max-width: 250px; 
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.search-input.visible {
+  opacity: 1;
+  visibility: visible;
+  width: 250px; /* Expanded width when visible */
+}
+
+.user-icon:hover {
+  transform: scale(1.1);
+}
+
+.cart-count-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #ffffff; /* White background for contrast */
+  color: #e60023; /* A bold red for numbers */
+  font-weight: bold;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  border: 2px solid #e60023; /* Adds a border for visibility */
+  line-height: 1;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* Hide toggle by default (Desktop) */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+/* NEW LAYOUT STYLE */
+.mobile-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Hide mobile actions in desktop */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none !important;
+  }
+
+  .mobile-actions {
+    gap: 20px;
+  }
+}
+
+/* Mobile view layout */
+@media (max-width: 768px) {
+  nav {
+    padding: 0.8rem 1rem;
+    height:70px;
+  }
+
+  .logo {
+    margin-top: 25px;
+    flex:1;
+  }
+  .menu-toggle {
+    display: block !important;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 55px;
+    right: 0;
+    width: 100%;
+    background-color: rgba(7, 7, 7, 0.9);
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 12px;
+    display: block;
+  }
+
+  .search-input.visible {
+    top: 15px;
+    right: -28px;
+    max-width: 120px; /* 👈 smaller size in mobile */
+    width: 160px;
+    padding: 6px 17px;
+    font-size: 14px;
+  }
+
+  .search-input {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+}

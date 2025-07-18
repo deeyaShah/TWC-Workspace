@@ -1,0 +1,142 @@
+.contact-us {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Header image fix */
+  .header-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Main content wrapper */
+  .contact-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+  
+  /* Contact info card */
+  .details {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    min-width: 300px;
+  }
+  
+  /* Title */
+  .title {
+    color: #000000;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  
+  /* Contact items */
+  .contact-item {
+    margin-bottom: 15px;
+  }
+  .contact-item h3 {
+    color: #333;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+  }
+  .contact-item p {
+    line-height: 1.6;
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  /* Map section */
+  .map-container {
+    flex: 1;
+    min-width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  .map {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+    margin: 0;
+  }
+  
+  /* Footer */
+  footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+  }
+  footer p {
+    margin: 5px 0;
+  }
+  
+  /* Headings left-align override */
+  div h3 {
+    text-align: left;
+  }
+  
+  /* ✅ Responsive adjustments */
+  @media (max-width: 768px) {
+    .contact-details {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    .details, .map-container {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
+      padding: 15px;
+    }
+  
+    .title {
+      font-size: 2rem;
+    }
+  
+    .contact-item h3 {
+      font-size: 1rem;
+    }
+  
+    .contact-item p {
+      font-size: 0.95rem;
+    }
+  
+    .map {
+      height: 250px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 1.7rem;
+    }
+  
+    .details, .map-container {
+      padding: 10px;
+    }
+  
+    .map {
+      height: 200px;
+    }
+  }
+  

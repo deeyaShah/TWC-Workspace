@@ -1,0 +1,85 @@
+.product-list {
+  margin-top: 70px;
+  background-color:#ca5211; /* Light aesthetic background */
+}
+
+/* Keep existing layout intact, just enhance effects */
+.product-container {
+  max-width: 360px;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: 
+  #ffffff;
+  text-align: center;
+  float: left;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect for product container */
+.product-container:hover {
+  transform: translateY(-5px) scale(1.02); /* Lift the card slightly */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Enhance shadow */
+}
+
+/* Image hover effect */
+.pic img {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.pic img:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  filter: brightness(1.1); /* Brighten the image */
+}
+
+/* Title hover effect */
+.title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 10px;
+  color: #333;
+  text-align: justify;
+  transition: color 0.3s ease-in-out;
+}
+
+.title:hover {
+  color: #007BFF; /* Change title color on hover */
+}
+
+/* Description */
+.discription {
+  font-size: 1em;
+  color: #666;
+  margin: 10px;
+  text-align: justify;
+}
+
+/* Customization */
+.custom {
+  font-size: 0.9em;
+  color: #007BFF;
+  margin: 10px;
+  text-align: justify;
+}
+
+/* Rating */
+.rating {
+  font-size: 1em;
+  color: #FFD700;
+  margin: 10px;
+  text-align: justify;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .product-container {
+    max-width: 100%;
+    float: none;
+    margin: 10px auto; /* Center the items */
+  }
+}

@@ -1,0 +1,179 @@
+/* AdminDashboard.css */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  /* overflow: hidden; */
+}
+
+.dashboard-container {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  background-color: #f7fafc; /* Light gray background */
+  margin-top: -60px;
+  margin-bottom: -70px;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 250px; /* Fixed width for sidebar */
+  background-color: #2d3748; /* Dark gray */
+  color: white;
+  padding: 20px;
+  transition: width 0.3s;
+  position: relative; /* Ensure it stays in place */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.logo img {
+  height: 40px; /* Adjust logo size */
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.menu-item:hover {
+  background-color: #4a5568; /* Darker gray on hover */
+}
+
+.menu-icon {
+  margin-right: 10px;
+}
+
+.logout {
+  margin-top: auto; /* Push logout to the bottom */
+}
+
+.main-content {
+  flex: 1; /* Take remaining space */
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.top-bar {
+  background-color: #4a5568; /* Dark gray */
+  color: white;
+  padding: 10px; /* Increased padding for more height */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Ensure it takes the full width of the parent */
+  box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.top-bar-icons {
+  display: flex;
+  align-items: center;
+}
+
+.search-container {
+  position: relative;
+  margin-right: 20px;
+}
+
+.search-icon {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.search-icon:hover {
+  transform: scale(1.1);
+}
+
+.search-input {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #2d3748; /* Dark gray */
+  color: white;
+  padding: 10px;
+  border: 1px solid #4a5568; /* Border color */
+  border-radius: 20px;
+  width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.search-input.visible {
+  opacity: 1;
+  visibility: visible;
+  width: 250px; /* Expanded width when visible */
+}
+
+.notification-icon {
+  cursor: pointer;
+  margin-left: 20px;
+  transition: transform 0.2s;
+}
+
+.notification-icon:hover {
+  transform: scale(1.1);
+}
+
+.content-area {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto; /* <-- changed from auto to hidden */
+}
+
+.welcome-message {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Submenu styles */
+.submenu-items {
+  margin-left: 2rem;
+  margin-top: 0.3rem;
+}
+
+.submenu-items li {
+  padding: 4px 0;
+  color: #ccc;
+}
+
+.submenu-items li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.submenu-items li:hover a {
+  color: white;
+}
+
+.active-submenu a {
+  color: #fff;
+  font-weight: bold;
+}
+
+.menu-item-dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}

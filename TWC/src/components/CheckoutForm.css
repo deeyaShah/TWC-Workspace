@@ -1,0 +1,214 @@
+/* ====== Global Styles ====== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F1E3D3;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* ====== Container Layout ====== */
+  .checkout-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding: 20px;
+    margin-top: 5px;
+    box-sizing: border-box;
+  }
+  
+  /* ====== Form Styles ====== */
+  .checkout-form {
+    background-color: #FFF6EB;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px;
+    box-sizing: border-box;
+  }
+  
+  /* ====== Headings ====== */
+  .head {
+    font-size: 28px;
+    text-align: center;
+    margin: 5px 0 30px;
+    color: #6B705C;
+  }
+  
+  /* ====== Labels & Inputs ====== */
+  .checkout-form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #6B705C;
+    font-size: 16px;
+  }
+  
+  .checkout-form input,
+  .checkout-form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #B7B7A4;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: white;
+  }
+  
+  .checkout-form input:focus,
+  .checkout-form textarea:focus {
+    border-color: #C58C6D;
+    outline: none;
+  }
+  
+  /* ====== Submit Button ====== */
+  .checkout-form button {
+    background-color: #C58C6D;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .checkout-form button:hover {
+    background-color: #DDBEA9;
+  }
+  
+  /* ====== Error Text ====== */
+  .error {
+    color: #D9534F;
+    font-size: 14px;
+    margin-top: -5px;
+    margin-bottom: 10px;
+  }
+  
+  /* ====== Flex Layouts ====== */
+  .name-container,
+  .state-postal-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .name-field,
+  .state-field,
+  .postal-field {
+    flex: 1;
+    min-width: 0; /* Helps prevent overflow in flex */
+  }
+  .checkout-button-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .checkout-button-group .action-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #6B705C;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .checkout-button-group .action-btn:hover {
+    background-color: #A5A58D;
+  }
+  
+  .checkout-button-group .action-btn.primary {
+    background-color: #C58C6D;
+  }
+  
+  .checkout-button-group .action-btn.primary:hover {
+    background-color: #DDBEA9;
+  }
+  
+  /* ====== Responsive Adjustments for Mobile ====== */
+  @media (max-width: 768px) {
+    .checkout-form {
+      padding: 20px;
+    }
+  
+    .head {
+      font-size: 24px;
+    }
+  
+    .checkout-form label {
+      font-size: 14px;
+    }
+  
+    .checkout-form input,
+    .checkout-form textarea {
+      font-size: 15px;
+      padding: 12px;
+    }
+  
+    .checkout-form button {
+      font-size: 15px;
+      padding: 12px;
+    }
+  
+    .name-container,
+    .state-postal-container {
+      flex-direction: column;
+      gap: 0;
+    }
+  
+    .name-field,
+    .state-field,
+    .postal-field {
+      width: 100%;
+    }
+  }
+  @media (max-width: 468px) {
+    .checkout-form {
+      padding: 15px;
+    }
+  
+    .head {
+      font-size: 20px;
+    }
+  
+    .checkout-form label {
+      font-size: 13px;
+    }
+  
+    .checkout-form input,
+    .checkout-form textarea {
+      font-size: 14px;
+      padding: 10px;
+    }
+    .checkout-button-group .action-btn {
+        font-size: 14px;
+        padding: 8px 14px;
+      }
+      
+    .checkout-form button {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .name-container,
+    .state-postal-container {
+      flex-direction: column;
+      gap: 0;
+    }
+  
+    .name-field,
+    .state-field,
+    .postal-field {
+      width: 100%;
+    }
+  }

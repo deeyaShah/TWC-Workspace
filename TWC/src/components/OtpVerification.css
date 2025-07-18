@@ -1,0 +1,132 @@
+/* ============================= */
+/* 🔷 OTP Page Base Layout       */
+/* ============================= */
+.otp-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px; /* ✅ Add padding for small screens */
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+  }
+  
+  /* ============================= */
+  /* 🔷 OTP Container Box          */
+  /* ============================= */
+  .otp-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 360px;
+    box-sizing: border-box;
+  }
+  
+  /* ============================= */
+  /* 🔷 Text and Subtext           */
+  /* ============================= */
+  .otp-subtext {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  /* ============================= */
+  /* 🔷 OTP Inputs                 */
+  /* ============================= */
+  .otp-input-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap; /* ✅ Allows wrapping on smaller screens */
+  }
+  
+  .otp-input {
+    width: 44px;
+    height: 52px;
+    font-size: 20px;
+    text-align: center;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    transition: border 0.3s ease;
+  }
+  
+  .otp-input:focus {
+    border-color: #007bff;
+  }
+  
+  /* ============================= */
+  /* 🔷 Submit Button              */
+  /* ============================= */
+  .otp-button {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .otp-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* ============================= */
+  /* 🔷 Resend OTP Text/Button     */
+  /* ============================= */
+  .otp-resend-text {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .otp-resend-button {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 14px;
+  }
+  
+  /* ============================= */
+  /* 📱 Responsive: Mobile Styles */
+  /* ============================= */
+  @media (max-width: 480px) {
+    .otp-wrapper {
+      padding: 20px 10px 10px 10px; /* Less bottom space */
+      align-items: flex-start;
+    }
+  
+    .otp-container {
+      padding: 24px 16px;
+      border-radius: 10px;
+    }
+  
+    .otp-input {
+      width: 40px;
+      height: 48px;
+      font-size: 18px;
+    }
+  
+    .otp-button {
+      font-size: 15px;
+      padding: 10px;
+    }
+  
+    .otp-subtext,
+    .otp-resend-text,
+    .otp-resend-button {
+      font-size: 13px;
+    }
+  }
+  
