@@ -1,0 +1,28 @@
+{
+  "name": "the-wood-culture-backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev":"nodemon TWC_Backend/server.js",
+    "build":"npm install && npm install --prefix TWC && npm run build --prefix TWC",
+    "start": "nodemon TWC_Backend/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-validator": "^7.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.10.1",
+    "multer": "^1.4.5-lts.2",
+    "nodemailer": "^6.10.0",
+    "razorpay": "^2.9.6"
+  }
+}
